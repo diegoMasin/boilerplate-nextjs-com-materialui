@@ -1,10 +1,23 @@
-import GlobalStyle from '../styles/GlobalStyles';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
 
-export default function MyApp({ Component, pageProps }) {
+import GlobalStyle from '../styles/GlobalStyles';
+import { ThemeProvider } from '@material-ui/core/styles';
+import LoggedBase from '../components/layout/loggedBase';
+import theme from '../styles/theme';
+
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <Head>
+        <title>Minha Defensoria</title>
+      </Head>
+      <ThemeProvider theme={theme}>
+        <LoggedBase>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </LoggedBase>
+      </ThemeProvider>
     </>
   );
 }

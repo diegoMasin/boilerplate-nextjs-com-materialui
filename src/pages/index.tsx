@@ -1,15 +1,18 @@
-import { Title } from '../styles/pages/Home';
-import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 export default function Home() {
   return (
     <div>
-      <section>
-        <Title>Hello World</Title>
-        <Button variant="contained" color="primary">
-          Testando Botão
-        </Button>
-      </section>
+      <Typography paragraph>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book.
+      </Typography>
+      <Typography paragraph>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book.
+      </Typography>
     </div>
   );
 }
