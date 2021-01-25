@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react'
-import { Title } from '../styles/pages/Home'
+import { useEffect, useState } from 'react';
+import { Title } from '../styles/pages/Home';
 
 interface IProduct {
-  id: string
-  title: string
+  id: string;
+  title: string;
 }
 
 export default function Home() {
-  const [recommendedProduct, setRecommendedProduct] = useState<IProduct[]>([])
+  const [recommendedProduct, setRecommendedProduct] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:3333/recommended').then(response => {
+    fetch(`${process.env.NEXT_PUBLIC_API_ACESSO}/recommended`).then(response => {
       response.json().then(data => {
-        setRecommendedProduct(data)
-      })
-    })
-  }, [])
+        setRecommendedProduct(data);
+      });
+    });
+  }, []);
 
   return (
     <div>
@@ -24,10 +24,10 @@ export default function Home() {
 
         <ul>
           {recommendedProduct.map(recommendedProduct => {
-            return <li key="recommendedProduct.id">{recommendedProduct.title}</li>
+            return <li key="recommendedProduct.id">{recommendedProduct.title}</li>;
           })}
         </ul>
       </section>
     </div>
-  )
+  );
 }
