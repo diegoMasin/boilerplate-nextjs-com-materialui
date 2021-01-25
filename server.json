@@ -6,7 +6,7 @@
   "products": [
     {
       "id": 1,
-      "title": "Camiseta Front-ends",
+      "title": "Camiseta Front-end",
       "price": 79.9,
       "category_id": "camisetas",
       "slug": "camiseta-front-ends"
