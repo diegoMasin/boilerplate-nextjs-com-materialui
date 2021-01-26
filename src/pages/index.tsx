@@ -1,4 +1,5 @@
 import Typography from '@material-ui/core/Typography';
+import { Title } from '../styles/pages/Home';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
         a type specimen book.
       </Typography>
+      <Title>Testando Styled Component</Title>
     </div>
   );
 }

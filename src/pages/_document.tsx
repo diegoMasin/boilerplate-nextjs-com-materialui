@@ -7,6 +7,7 @@ import { ServerStyleSheet } from 'styled-components';
 import theme from '../styles/theme';
 
 export default class MyDocument extends Document {
+  // TODO: em SERVER SIDE, a cor escura das letras passa a ser clara. E aparentemente recursos como o Drawer, param de abrir.
   static async getInitialProps(ctx: DocumentContext) {
     const styledComponentsSheet = new ServerStyleSheet();
     const materialSheets = new ServerStyleSheets();
