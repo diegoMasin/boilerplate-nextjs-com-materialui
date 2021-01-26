@@ -5,7 +5,7 @@ interface Props {
   link: any;
 }
 
-const withoutAuthBase: React.FC<Props> = ({ children, link }) => {
+const WithoutAuthBase: React.FC<Props> = ({ children, link }) => {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -22,4 +22,4 @@ const withoutAuthBase: React.FC<Props> = ({ children, link }) => {
   );
 };
 
-export default withoutAuthBase;
+export default WithoutAuthBase;
