@@ -1,23 +1,24 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { ThemeProvider } from '@material-ui/core/styles';
+
+import { AuthProvider } from '../providers/AuthProvider';
 
 import GlobalStyle from '../styles/GlobalStyles';
-import { ThemeProvider } from '@material-ui/core/styles';
-import LoggedBase from '../components/layout/loggedBase';
 import theme from '../styles/theme';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Minha Defensoria</title>
+        <title>Defensoria Pública Geral do Estado do Ceará</title>
       </Head>
-      <ThemeProvider theme={theme}>
-        <LoggedBase>
+      <AuthProvider>
+        <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Component {...pageProps} />
-        </LoggedBase>
-      </ThemeProvider>
+        </ThemeProvider>
+      </AuthProvider>
     </>
   );
 }
