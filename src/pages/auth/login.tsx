@@ -22,7 +22,9 @@ const Login: React.FC = () => {
     setPasswordMessage('');
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
     setCpfMessage('');
     setPasswordMessage('');
 
@@ -35,7 +37,7 @@ const Login: React.FC = () => {
           password: password,
         })
         .then(response => {
-          if (response.data && response.data.user.is_dpge) {
+          if (response.data) {
             localStorage.setItem('current-user', JSON.stringify(response.data));
             localStorage.setItem('current-user-last-check', `${Date.now()}`);
             setAuthenticated(true);
