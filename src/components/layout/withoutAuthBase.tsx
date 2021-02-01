@@ -10,7 +10,7 @@ const WithoutAuthBase: React.FC<Props> = ({ children, link }) => {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <Box mt={5} mb={2} textAlign="center">
-        <img width="380" src="http://www.defensoria.ce.def.br/wp-content/uploads/2015/02/logo-horizontal.png" />
+        <img width="350" src="http://www.defensoria.ce.def.br/wp-content/uploads/2015/02/logo-horizontal.png" />
       </Box>
       <Card>
         <CardContent style={{ padding: 20 }}>{children}</CardContent>
